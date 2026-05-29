@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360" role="img" aria-label="POD MODE. A support-unit operating stance.">
+  <defs>
+    <style>
+      .field { fill: #c8c4b7; }
+      .ink   { fill: #454138; }
+      .rule  { stroke: #454138; fill: none; }
+      .hair  { stroke: #8c8775; fill: none; }
+      .serif { font-family: Georgia, "Times New Roman", "Noto Serif", serif; }
+      .mono  { font-family: "Courier New", "DejaVu Sans Mono", monospace; }
+    </style>
+  </defs>
+
+  <!-- field -->
+  <rect class="field" x="0" y="0" width="1200" height="360"/>
+
+  <!-- double-rule frame -->
+  <rect class="rule" x="24" y="24" width="1152" height="312" stroke-width="1.6"/>
+  <rect class="hair" x="32" y="32" width="1136" height="296" stroke-width="1"/>
+
+  <!-- corner ticks -->
+  <g class="rule" stroke-width="1.6">
+    <path d="M24 56 L24 24 L56 24"/>
+    <path d="M1176 56 L1176 24 L1144 24"/>
+    <path d="M24 304 L24 336 L56 336"/>
+    <path d="M1176 304 L1176 336 L1144 336"/>
+  </g>
+
+  <!-- designation plate -->
+  <g>
+    <rect class="rule" x="64" y="78" width="150" height="40" stroke-width="1.4"/>
+    <text class="mono ink" x="139" y="104" font-size="20" letter-spacing="3" text-anchor="middle">POD 042</text>
+  </g>
+  <text class="mono ink" x="232" y="104" font-size="15" letter-spacing="2" opacity="0.72">// support unit online</text>
+
+  <!-- bones / presence / flavor tag, top-right -->
+  <text class="mono ink" x="812" y="104" font-size="15" letter-spacing="3" opacity="0.72">bones // presence // flavor</text>
+
+  <!-- title -->
+  <text class="serif ink" x="62" y="216" font-size="104" letter-spacing="6">POD MODE</text>
+
+  <!-- divider -->
+  <line class="hair" x1="66" y1="244" x2="1136" y2="244" stroke-width="1"/>
+
+  <!-- subtitle -->
+  <text class="mono ink" x="66" y="282" font-size="17" letter-spacing="1.5">a support-unit operating stance for AI coding agents</text>
+</svg>
