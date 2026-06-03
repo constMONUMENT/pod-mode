@@ -95,17 +95,37 @@ Example, mid-work:
 
 ## // pod programs (optional commands)
 
-Beyond the core stance, the [`commands/`](commands/) directory holds optional slash commands,
-most named after Pod Programs from NieR:Automata and remapped to real work: `/pod-laser` (delete
-a file), `/pod-hammer` (zip a target), `/pod-shut-up` (commentary-only mode), `/pod-scanner`
-(open-ended sweep), `/pod-analysis`, `/pod-repair` (disciplined fix), `/pod-data-exchange`
-(two-unit second opinion), `/pod-fortune`, `/pod-ending-e`, and `/pod-pet`. Cherry-pick what you want:
+Beyond the core stance, the [`commands/`](commands/) directory holds ten optional slash commands,
+most named after Pod Programs from NieR:Automata and remapped to real work.
+
+| Command | What it does |
+| --- | --- |
+| `/pod-laser <file>` | Precise strike. Deletes one file, with a warning and a confirm. |
+| `/pod-hammer <path>` | One heavy blow. Compresses a file or folder to a `.zip`. |
+| `/pod-shut-up` | Commentary-and-proposals-only mode. The unit observes, never acts. |
+| `/pod-scanner <objective>` | Open-ended sweep toward a stated objective. Scans anything. |
+| `/pod-analysis <target>` | Deep read-only diagnostic breakdown. |
+| `/pod-repair <fault>` | Disciplined fix: reproduce, root-cause, minimal diff, prove the check, verify. |
+| `/pod-data-exchange <q>` | Two units confer; streams live in a new Terminal window and saves the transcript to `~/Documents`. |
+| `/pod-fortune` | Deadpan clinical prediction. Callable anytime. |
+| `/pod-ending-e` | Mode toggle. Names every slip plainly, closes with a verified canon line. |
+| `/pod-pet` | Pet the Pod. Returns a canon affinity line. |
+
+Five of them (`laser`, `hammer`, `scanner`, `analysis`, `repair`) also **fire on context** while
+Pod Mode is active: just say "delete that file", "zip the logs", "scan for secrets", "analyze
+this module", or "fix the failing test", and the matching program engages. The other five are
+explicit-invocation only.
+
+Cherry-pick what you want:
 
 ```bash
 cp commands/pod-*.md ~/.claude/commands/
+# /pod-data-exchange also needs its helper scripts for the live window:
+mkdir -p ~/.claude/commands/lib && cp commands/lib/*.sh ~/.claude/commands/lib/
+chmod +x ~/.claude/commands/lib/*.sh
 ```
 
-See [commands/README.md](commands/README.md) for the full table.
+See [commands/README.md](commands/README.md) for the full table and install notes.
 
 ---
 
