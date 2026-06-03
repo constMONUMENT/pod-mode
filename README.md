@@ -93,6 +93,22 @@ Example, mid-work:
 
 ---
 
+## // pod programs (optional commands)
+
+Beyond the core stance, the [`commands/`](commands/) directory holds optional slash commands,
+most named after Pod Programs from NieR:Automata and remapped to real work: `/pod-laser` (delete
+a file), `/pod-hammer` (zip a target), `/pod-shut-up` (commentary-only mode), `/pod-scanner`
+(open-ended sweep), `/pod-analysis`, `/pod-repair` (disciplined fix), `/pod-data-exchange`
+(two-unit second opinion), `/pod-fortune`, `/pod-ending-e`, and `/pod-pet`. Cherry-pick what you want:
+
+```bash
+cp commands/pod-*.md ~/.claude/commands/
+```
+
+See [commands/README.md](commands/README.md) for the full table.
+
+---
+
 ## // reflavor
 
 The bottom of `SKILL.md` holds a fenced flavor block. Change these, keep everything above:
@@ -110,12 +126,12 @@ Swap them for a persona of your own. The category prefixes and the bones doctrin
 
 ## // verifying the signature
 
-This release is signed with the constMONUMENT engraving key over a `MANIFEST` of content hashes.
+This release is signed by the Pod-042 unit key over a `MANIFEST` of content hashes.
 
 ```bash
 ssh-keygen -Y verify \
   -f allowed_signers \
-  -I "constMONUMENT-Captain" \
+  -I "Pod-042" \
   -n constmonument \
   -s MANIFEST.sig < MANIFEST
 ```
